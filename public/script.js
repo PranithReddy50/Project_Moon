@@ -121,7 +121,7 @@ function setFinalResult(result) {
 async function sendToBackend(actionsArr, finalResult, deviceInfo) {
   const payload = { actions: actionsArr, finalResult, deviceInfo };
   try {
-    const res = await fetch('http://localhost:5000/api/send', {
+    const res = await fetch('/api/send', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
